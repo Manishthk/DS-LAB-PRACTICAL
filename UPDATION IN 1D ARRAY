@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};  
+    int index, newValue;
+
+    printf("Original array: \n");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    printf("\nEnter the index (0-4) to update: ");
+    scanf("%d", &index);
+
+    if (index >= 0 && index < 5) {
+        printf("Enter the new value: ");
+        scanf("%d", &newValue);
+
+        arr[index] = newValue;
+
+        printf("\nUpdated array: \n");
+        for (int i = 0; i < 5; i++) {
+            printf("%d ", arr[i]);
+        }
+    } else {
+        printf("Invalid index! Please enter a value between 0 and 4.");
+    }
+
+    return 0;
+}
